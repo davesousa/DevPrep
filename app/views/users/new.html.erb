@@ -1,0 +1,23 @@
+
+<head>
+<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/login.css">
+</head>
+
+
+
+<div class="signup">
+  <div class="container">
+    <img id="logo" src="http://www.lighthouselabs.ca/static-assets/lighthouse-labs.png">
+    <div class="form">
+   <h1>Sign up</h1>
+      <%= form_for(@user) do |f| %>
+          <%= f.text_field :first_name, :placeholder => "First name" %>
+          <%= f.text_field :last_name, :placeholder => "Last name" %>
+          <%= f.email_field :email, :placeholder => "Email" %>
+          <%= f.text_field :cover_photo, :placeholder => "Cover URL" %>
+          <%= f.password_field :password, :placeholder => "Password" %>
+          <%= f.submit "Create an account", class: "btn-submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>
